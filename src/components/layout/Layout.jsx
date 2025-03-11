@@ -2,6 +2,7 @@ import React from "react";
 import scss from "./Layout.module.scss";
 import MainRoutes from "../../routes/MainRoutes";
 import Header from "./header/Header";
+import Footer from "./footer/Footer";
 
 const Layout = () => {
   return (
@@ -10,6 +11,7 @@ const Layout = () => {
       <main>
         <MainRoutes />
       </main>
+      <Footer />
     </div>
   );
 };

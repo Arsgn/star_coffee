@@ -1,11 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import ViewMenu from "../pages/ViewMenu";
 
 const MainRoutes = () => {
   const routes = [
     {
-      link: "",
-      element: "",
+      link: "/",
+      element: <ViewMenu />,
       id: 1,
     },
     {

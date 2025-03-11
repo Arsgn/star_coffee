@@ -1,0 +1,88 @@
+#viewmenu {
+  // outline: 1px solid rgba(248, 3, 3, 0.774);
+  padding-block: 40px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.content {
+  color: #fff;
+  display: flex;
+  background: rgb(50, 70, 47);
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 10px 10px 30px 10px rgb(122, 122, 122);
+  img {
+    max-width: 550px;
+    height: 460px;
+    object-fit: cover;
+  }
+}
+.menu_text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 500px;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+/* From Uiverse.io by Creatlydev */
+/* From Uiverse.io by Creatlydev */
+.button {
+  line-height: 1;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  width: 180px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.35em;
+  padding: 0.75em 1em;
+  padding-right: 1.25em;
+  color: #fff;
+  border: 1px solid transparent;
+  font-weight: 700;
+  border-radius: 2em;
+  font-size: 1rem;
+  box-shadow: 0 0.7em 1.5em -0.5em hsla(120, 30%, 35%, 0.745);
+  transition: transform 0.3s;
+
+  background: none;
+  border: 1px solid #fff;
+}
+
+.button__icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.button:hover {
+  border-color: #fbfbfb;
+}
+
+.button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0.5em 1.5em -0.5em hsla(126, 74%, 57%, 0.745);
+}
+.join_text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 500px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.content:nth-child(2) {
+  color: #fff;
+  display: flex;
+  background: rgb(50, 70, 47);
+  align-items: center;
+  justify-content: space-between;
+}

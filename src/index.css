@@ -4,10 +4,12 @@
   text-decoration: none;
   list-style: none;
   border: none;
+  font-family: Montserrat;
 }
 
 .container {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+  padding-inline: 40px;
 }
