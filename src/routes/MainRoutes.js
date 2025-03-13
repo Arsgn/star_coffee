@@ -1,6 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import ViewMenu from "../pages/ViewMenu";
+import Register from "../authentication/register/Register";
+import Login from "../authentication/login/Login";
+import AddProduct from "../admin/AddProduct";
+import Menu from "../pages/Menu";
+import Edit from "../admin/Edit";
 
 const MainRoutes = () => {
   const routes = [
@@ -10,14 +15,29 @@ const MainRoutes = () => {
       id: 1,
     },
     {
-      link: "",
-      element: "",
+      link: "/login",
+      element: <Login />,
       id: 2,
     },
     {
-      link: "",
-      element: "",
+      link: "/register",
+      element: <Register />,
       id: 3,
+    },
+    {
+      link: "/add",
+      element: <AddProduct />,
+      id: 4,
+    },
+    {
+      link: "/menu",
+      element: <Menu />,
+      id: 5,
+    },
+    {
+      link: "/edit/:id",
+      element: <Edit />,
+      id: 6,
     },
   ];
   return (

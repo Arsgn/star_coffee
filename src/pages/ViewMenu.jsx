@@ -1,19 +1,21 @@
 import React from "react";
 import scss from "./ViewMenu.module.scss";
+import { useNavigate } from "react-router-dom";
 const ViewMenu = () => {
+  const navigate = useNavigate();
   return (
     <section id={scss.viewmenu}>
       <div className="container">
         <div className={scss.box}>
           <div className={scss.content}>
             <img
-              src="https://media.istockphoto.com/id/157774909/photo/frappuccino-beverage-from-starbucks-coffee.jpg?s=612x612&w=0&k=20&c=5lXK8UoUL-rQJGP-yEmS8iguA4kK0Xy_OVv1KX0xhe8="
+              src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/48d596153372955.632e2efe72dc4.jpg"
               alt="img"
             />
             <div className={scss.menu_text}>
               <h1>The Spring Edit</h1>
               <h3>Fresh flavors, familiar joy.</h3>
-              <button className={scss.button}>
+              <button onClick={() => navigate("/menu")} className={scss.button}>
                 <span class={scss.button__text}>View the menu</span>
               </button>
             </div>
@@ -31,7 +33,7 @@ const ViewMenu = () => {
               </button>
             </div>
             <img
-              src="https://media.istockphoto.com/id/157774909/photo/frappuccino-beverage-from-starbucks-coffee.jpg?s=612x612&w=0&k=20&c=5lXK8UoUL-rQJGP-yEmS8iguA4kK0Xy_OVv1KX0xhe8="
+              src="https://i.pinimg.com/736x/5b/dc/fb/5bdcfb99bf71d82feb5885520a5bf9dd.jpg"
               alt="img"
             />
           </div>

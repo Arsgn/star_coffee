@@ -1,62 +1,73 @@
-#header {
-  padding-block: 20px;
-  box-shadow: 0.5px 0.5px 20px 0.4px;
-  background: url(https://e0.pxfuel.com/wallpapers/371/767/desktop-wallpaper-mcdonalds-logo-yellow-shiny-logo-mcdonalds-metal-emblem-red-carbon-fiber-texture-mcdonalds-brands-creative-art-mcdonalds-emblem.jpg)
-    no-repeat center;
-  background-size: 100%;
-  backdrop-filter: blur(10px);
-  z-index: 1;
+.product {
+  padding: 100px 0 200px 0;
 }
-.header {
+.box {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 100%;
-  nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .header_text {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    img {
-      max-width: 70px;
-      width: 100%;
-      object-fit: cover;
-      cursor: pointer;
-    }
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      p {
-        color: #fff;
-        display: flex;
-        font-weight: 600;
-        transition: 1s ease;
-        box-shadow: 0 0.7em 1.5em -0.5em rgb(255, 200, 0);
-      }
-      p:hover {
-        color: rgb(255, 200, 0);
-        transition: 0.3s ease;
-      }
-      p:active {
-        transform: translateY(-3px);
-        // transition: 0.3s ease;
-      }
-    }
-  }
+  justify-content: center;
+}
+.git {
+  background: url(https://wallpapercat.com/w/full/6/a/3/949680-2560x1707-desktop-hd-mcdonalds-wallpaper-image.jpg)
+    no-repeat center;
+  background-size: 170%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+  gap: 30px;
+  max-width: 350px;
+  width: 100%;
+  position: absolute;
+  z-index: -99;
+  height: 365px;
 }
 
-/* From Uiverse.io by Creatlydev */
+.content {
+  background: rgba(0, 0, 0, 0.477);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+  gap: 30px;
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 3px 3px 50px 0.5px black;
+  color: white;
+}
+::placeholder {
+  color: white;
+}
+
+.content input {
+  border: 2px solid rgba(255, 255, 255, 0.461);
+  width: 15em;
+  height: 2.5em;
+  padding-left: 0.8em;
+  color: white;
+  outline: none;
+  overflow: hidden;
+  background: none;
+  border-radius: 10px;
+  transition: all 0.5s;
+  width: 300px;
+}
+
+.content input:hover {
+  border: 2px solid #ec784a;
+  box-shadow: 0px 0px 0px 7px rgba(118, 67, 17, 0.678);
+  background-color: rgba(255, 255, 255, 0.107);
+}
+
 .button {
+  width: 160px;
   line-height: 1;
   background-color: transparent;
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.35em;
   padding: 0.75em 1em;
   padding-right: 1.25em;
@@ -111,10 +122,4 @@
 .button:nth-child(2):active {
   transform: scale(0.98);
   box-shadow: 0 0.5em 1.5em -0.5em hsla(45, 100%, 50%, 0.745);
-}
-
-ion-icon {
-  font-size: 25px;
-  cursor: pointer;
-  color: #fff;
 }

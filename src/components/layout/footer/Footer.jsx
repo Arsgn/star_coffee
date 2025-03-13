@@ -12,10 +12,10 @@ const Footer = () => {
         <div className={scss.content}>
           <div className={scss.logo}>
             <img
-              src="https://img.icons8.com/?size=100&id=tpEHoPSOVXPm&format=png&color=000000"
+              src="https://img.icons8.com/?size=100&id=XvRFJSfgZ328&format=png&color=000000"
               alt=""
             />
-            <h1>StarBucks</h1>
+            <h1>McDonald's</h1>
           </div>
           <div className={scss.block}>
             <div className={scss.box}>
@@ -23,7 +23,7 @@ const Footer = () => {
                 <li>Contact</li>
                 <li>+7-989-586-41-54</li>
                 <li>+7-989-485-54-76</li>
-                <a href="">startbucks@gmail.com</a>
+                <a href="">mcDonalds@gmail.com</a>
               </ul>
               <ul>
                 <li>Products</li>

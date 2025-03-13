@@ -10,10 +10,10 @@
 .content {
   color: #fff;
   display: flex;
-  background: rgb(50, 70, 47);
+  background: #b57b08;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 10px 10px 30px 10px rgb(122, 122, 122);
+  box-shadow: 0.5px 5px 50px 0px rgba(255, 174, 0, 0.342);
   img {
     max-width: 550px;
     height: 460px;
@@ -82,7 +82,7 @@
 .content:nth-child(2) {
   color: #fff;
   display: flex;
-  background: rgb(50, 70, 47);
+  background: #b57b08;
   align-items: center;
   justify-content: space-between;
 }
