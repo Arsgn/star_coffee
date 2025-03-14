@@ -40,24 +40,28 @@ const AddProduct = () => {
               class="name"
               onChange={(e) => handlerInput(e)}
               type="text"
+              name="name"
               placeholder="Name"
             />
             <input
               class="price"
               onChange={(e) => handlerInput(e)}
               type="text"
+              name="price"
               placeholder="Price"
             />
             <input
               class="imageUrl"
               onChange={(e) => handlerInput(e)}
               type="text"
+              name="imageUrl"
               placeholder="ImageUrl"
             />
             <input
               class="category"
               onChange={(e) => handlerInput(e)}
               type="text"
+              name="category"
               placeholder="Category"
             />
             <button onClick={handlerSubmit} className={scss.button}>

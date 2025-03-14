@@ -29,20 +29,47 @@ const Header = () => {
             </nav>
           </div>
           <nav>
-            <Link to="/add">
-              <div className="icon" onClick={() => navigate("/add")}>
-                <ion-icon name="person-outline"></ion-icon>
+            {user
+              ? (user.email === "black@gmail.com",
+                "arsenkonurbaev122@gmail.com" ? (
+                  <Link to="/add">
+                    <div className="icon" onClick={() => navigate("/add")}>
+                      <ion-icon name="person-outline"></ion-icon>
+                    </div>
+                  </Link>
+                ) : (
+                  ""
+                ))
+              : ""}
+            {user ? (
+              <img
+                style={{ width: "40px", height: "40px", borderRadius: "100%" }}
+                src={user.photoURL}
+                alt=""
+              />
+            ) : (
+              <div className={scss.button}>
+                <span
+                  onClick={() => navigate("/register")}
+                  class={scss.button__text}
+                >
+                  Sign up
+                </span>
               </div>
-            </Link>
+            )}
+            {user ? (
+              <Link to="/register">
+                <div onClick={() => logOutUser()} className={scss.button}>
+                  <span class={scss.button__text}>Log Out</span>
+                </div>
+              </Link>
+            ) : (
+              ""
+            )}
             <Link to="/login">
               <button className={scss.button}>
                 <span class={scss.button__text}>Sign in</span>
               </button>
-            </Link>
-            <Link to="/register">
-              <div className={scss.button}>
-                <span class={scss.button__text}>Sign up</span>
-              </div>
             </Link>
           </nav>
         </div>

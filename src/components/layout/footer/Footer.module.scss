@@ -1,7 +1,8 @@
 .footer {
-  background: url(https://e0.pxfuel.com/wallpapers/371/767/desktop-wallpaper-mcdonalds-logo-yellow-shiny-logo-mcdonalds-metal-emblem-red-carbon-fiber-texture-mcdonalds-brands-creative-art-mcdonalds-emblem.jpg)
-    no-repeat center;
-  padding: 30px 0;
+  // background: url(https://e0.pxfuel.com/wallpapers/371/767/desktop-wallpaper-mcdonalds-logo-yellow-shiny-logo-mcdonalds-metal-emblem-red-carbon-fiber-texture-mcdonalds-brands-creative-art-mcdonalds-emblem.jpg)
+  //   no-repeat center;
+  padding: 10px 0 30px 0;
+  background: rgba(0, 0, 0, 0.256);
   background-size: 100%;
   // border-radius: 50% 50% 0 0;
   //   height: 250px;
@@ -39,7 +40,7 @@
   display: flex;
   align-items: center;
   padding: 40px 0 25px 0;
-  gap: 100px;
+  gap: 120px;
 }
 
 .content ul {
@@ -50,8 +51,18 @@
 }
 
 .content ul li:first-child {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 700;
+}
+
+.content ul li {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.content ul li:hover {
+  transition: 0.2s;
+  color: yellow;
 }
 
 .content h1 {
@@ -72,4 +83,10 @@
   cursor: pointer;
   font-size: 25px;
   padding-bottom: 25px;
+}
+
+.ion:hover {
+  transition: 0.2s;
+  color: yellow;
+  transform: scale(1.1);
 }

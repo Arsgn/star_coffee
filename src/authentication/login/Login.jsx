@@ -33,7 +33,7 @@ const Login = () => {
           <div className={scss.block}>
             {error && <Alert severity="error">{error}</Alert>}
             <h2>Sing in</h2>
-            <input type="text" placeholder="Name" />
+            {/* <input type="text" placeholder="Name" /> */}
             <input
               type="text"
               onChange={(e) => setEmail(e.target.value)}

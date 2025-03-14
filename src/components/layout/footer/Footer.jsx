@@ -26,10 +26,16 @@ const Footer = () => {
                 <a href="">mcDonalds@gmail.com</a>
               </ul>
               <ul>
-                <li>Products</li>
-                <li>Coffee</li>
-                <li>Cappuccino</li>
-                <li>Fast</li>
+                <li>About Us</li>
+                <li>About Us Overview</li>
+                <li>Values In Action</li>
+                <li>Recalls & Alerts</li>
+              </ul>
+              <ul>
+                <li>Services</li>
+                <li>Delivery Partners</li>
+                <li>Mobile Order & Pay</li>
+                <li>Family Fun Hub</li>
               </ul>
             </div>
             <div className={scss.icons}>

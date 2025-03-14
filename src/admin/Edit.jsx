@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import scss from "./AddProduct.module.scss";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useProduct } from "../context/ProductContext";
 
 const initialValue = {
@@ -11,10 +11,11 @@ const initialValue = {
 };
 
 const Edit = () => {
-  const { getOneProduct, oneProduct, editProduct } = useProduct();
+  const { getOneProduct, oneProduct, editProduct, user } = useProduct();
   const { id } = useParams();
   const [inputValues, setInputValues] = useState(initialValue);
 
+  const navigate = useNavigate();
   useEffect(() => {
     getOneProduct(id);
   }, []);
@@ -74,8 +75,20 @@ const Edit = () => {
               placeholder="Category"
             />
             <button onClick={save} className={scss.button}>
-              <span class={scss.button__text}>Save</span>
+              <span onClick={() => navigate("/menu")} class={scss.button__text}>
+                Save
+              </span>
             </button>
+            {/* {user
+              ? (user.email === "black@gmail.com",
+                "arsenkonurbaev122@gmail.com" ? (
+                  <button onClick={save} className={scss.button}>
+                    <span class={scss.button__text}>Save</span>
+                  </button>
+                ) : (
+                  ""
+                ))
+              : ""} */}
           </div>
         </div>
       </div>
