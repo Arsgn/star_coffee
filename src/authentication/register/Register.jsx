@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import scss from "./Register.module.scss";
 import { Alert } from "@mui/material";
 import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const { singInWithGoogle, register, error } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   return (
     <div className={scss.login}>
       <div className="container">
@@ -30,7 +31,7 @@ const Register = () => {
             <div className={scss.btn}>
               <button
                 className={scss.first}
-                onClick={() => register(email, password)}
+                onClick={() => register(email, password) / navigate("/menu")}
               >
                 Регистрация
               </button>

@@ -2,6 +2,7 @@ import React from "react";
 import scss from "./Header.module.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
+import { Tooltip } from "@mui/material";
 
 const Header = () => {
   const { user, logOutUser } = useAuth();
@@ -44,20 +45,33 @@ const Header = () => {
               ""
             )}
             {user ? (
-              <img
-                style={{ width: "40px", height: "40px", borderRadius: "100%" }}
-                src={user.photoURL}
-                alt=""
-              />
+              <Tooltip title={user.displayName}>
+                <img
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "100%",
+                  }}
+                  src={user.photoURL}
+                  alt=""
+                />
+              </Tooltip>
             ) : (
-              <div className={scss.button}>
-                <span
-                  onClick={() => navigate("/register")}
-                  class={scss.button__text}
-                >
-                  Sign up
-                </span>
-              </div>
+              <>
+                <div className={scss.button}>
+                  <span
+                    onClick={() => navigate("/register")}
+                    class={scss.button__text}
+                  >
+                    Sign up
+                  </span>
+                </div>
+                <Link to="/login">
+                  <button className={scss.button}>
+                    <span class={scss.button__text}>Sign in</span>
+                  </button>
+                </Link>
+              </>
             )}
             {user ? (
               <Link to="/register">
@@ -68,11 +82,6 @@ const Header = () => {
             ) : (
               ""
             )}
-            <Link to="/login">
-              <button className={scss.button}>
-                <span class={scss.button__text}>Sign in</span>
-              </button>
-            </Link>
           </nav>
         </div>
       </div>

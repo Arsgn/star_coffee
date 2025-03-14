@@ -47,7 +47,7 @@ const ProductContext = ({ children }) => {
   }
 
   async function getOneProduct(id) {
-    let { data } = await axios(`${API}/ ${id}`);
+    let data = await axios(`${API}/ ${id}`);
     setOneProduct(data);
   }
 
@@ -59,19 +59,21 @@ const ProductContext = ({ children }) => {
     });
   }
 
-  async function editProduct(id, editedProduct) {
-    delete editedProduct._id;
-    await axios.patch(`${API}/${id}`, editedProduct);
-  }
-
-  const [page, setPage] = useState(1);
-  const itemPerPages = 3;
-  const count = Math.ceil(state.data.length / itemPerPages);
-
-  function handlerPage() {
-    let start = (page - 1) * itemPerPages;
-    let end = start + itemPerPages;
-    return state.data.slice(start, end);
+  function filterProduct(value) {
+    if (value === "all") {
+      dispatch({
+        type: "FILTER",
+        payload: state.fullData, // Возвращаем полный список товаров
+      });
+    } else {
+      let result = state.fullData.filter(
+        (item) => item.category.toLowerCase() === value
+      );
+      dispatch({
+        type: "FILTER",
+        payload: result,
+      });
+    }
   }
 
   function searchProduct(searchValue) {
@@ -88,22 +90,19 @@ const ProductContext = ({ children }) => {
       readProduct();
     }
   }
+  async function editProduct(id, editedProduct) {
+    delete editedProduct._id;
+    await axios.patch(`${API}/${id}`, editedProduct);
+  }
 
-  function filterProduct(value) {
-    if (value === "all") {
-      dispatch({
-        type: "FILTER",
-        payload: state.data.fullData, // Возвращаем полный список товаров
-      });
-    } else {
-      let result = state.data.fullData.filter(
-        (item) => item.category.toLowerCase() === value
-      );
-      dispatch({
-        type: "FILTER",
-        payload: result,
-      });
-    }
+  const [page, setPage] = useState(1);
+  const itemPerPages = 3;
+  const count = Math.ceil(state.data.length / itemPerPages);
+
+  function handlerPage() {
+    let start = (page - 1) * itemPerPages;
+    let end = start + itemPerPages;
+    return state.data.slice(start, end);
   }
 
   const values = {
@@ -122,7 +121,6 @@ const ProductContext = ({ children }) => {
     editProduct,
     oneProduct,
     getProduct,
-    searchProduct,
   };
 
   return (

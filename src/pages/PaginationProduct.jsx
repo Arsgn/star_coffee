@@ -1,6 +1,6 @@
-import { Pagination } from "@mui/material";
 import React from "react";
 import { useProduct } from "../context/ProductContext";
+import { Pagination } from "@mui/material";
 
 const PaginationProduct = () => {
   const { setPage, count } = useProduct();
