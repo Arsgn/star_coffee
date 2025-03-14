@@ -29,18 +29,20 @@ const Header = () => {
             </nav>
           </div>
           <nav>
-            {user
-              ? (user.email === "black@gmail.com",
-                "arsenkonurbaev122@gmail.com" ? (
-                  <Link to="/add">
-                    <div className="icon" onClick={() => navigate("/add")}>
-                      <ion-icon name="person-outline"></ion-icon>
-                    </div>
-                  </Link>
-                ) : (
-                  ""
-                ))
-              : ""}
+            {user ? (
+              user.email === "black@gmail.com" &&
+              user.email === "arsenkonurbaev122@gmail.com" ? (
+                <Link to="/add">
+                  <div className="icon" onClick={() => navigate("/add")}>
+                    <ion-icon name="person-outline"></ion-icon>
+                  </div>
+                </Link>
+              ) : (
+                ""
+              )
+            ) : (
+              ""
+            )}
             {user ? (
               <img
                 style={{ width: "40px", height: "40px", borderRadius: "100%" }}
